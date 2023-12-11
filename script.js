@@ -14,7 +14,7 @@ btn_comecar.addEventListener("click",()=>{
     gameCampo.classList.remove("ocultar")
     comecar=setInterval(moveCirculo,350)
     setTimeout(parar,6000)
-    // setTimeout(som,5600)
+    setTimeout(som,960)
     setTimeout(piscar,3000)
     setTimeout(paraPiscar,10000)
     
@@ -26,9 +26,9 @@ const segundo=(a)=>{
 }
 
 const som=()=>{
-    grito.play()
+    grito.play();
 }
-som()
+
 const parar=()=>{
     branco.classList.add("ocultar")
     clearInterval(comecar) 

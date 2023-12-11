@@ -1,0 +1,112 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    box-sizing: border-box;
+    
+}
+
+.ocultar{
+    display: none !important;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 150px;
+    /* border: 1px solid red; */
+}
+.header h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: red;
+    /* font-size: 1.5rem;     */
+}
+.header p{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    /* border: 1px solid red; */
+}
+.campoAmostra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+.amostra{
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.tempo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    font-size: 1.5rem;
+}
+.gameCampo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top:0px;
+    left: 0px;
+    background-color: rgb(58, 58, 58);
+}
+.btn_comecar{
+    width: 100px;
+    height: 30px;
+    color: #eee;
+    background-color: rgb(24, 24, 119);
+    border-radius: 5px;
+}
+.game{
+    position: relative;
+    top:0px;
+    margin: 5px;
+    min-width: 360px !important;
+    max-width: 800px;
+    width: 100%;
+    height:600px;
+    /* border: 1px solid red; */
+}
+.preto{
+    /* visibility: hidden; */
+    position: absolute;
+    opacity: 70%;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+.imageTerror{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.branco{
+    /* visibility: hidden; */
+    position: absolute;
+    background-color: #eee;
+    width: 100%;
+    height: 100%;
+}
+.circulo{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+}

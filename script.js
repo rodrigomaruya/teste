@@ -5,7 +5,7 @@ const gameCampo=document.getElementById("gameCampo")
 const preto = document.getElementById("preto");
 const tempo = document.getElementById("tempo");
 let grito=document.createElement("audio")
-grito.setAttribute("src","./grito.wav")
+grito.setAttribute("src","./fotos/gemido-whatsapp.mp3")
 let comecar=null
 let n=0
 

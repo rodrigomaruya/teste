@@ -24,7 +24,7 @@ const segundo=(a)=>{
 }
 
 const som=()=>{
-    let grito=new Audio("./fotos/grito.m4r")
+    let grito=new Audio("./fotos/gemido-whatsapp.mp3")
     grito.play()
 }
 const parar=()=>{

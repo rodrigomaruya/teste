@@ -12,7 +12,7 @@ btn_comecar.addEventListener("click",()=>{
     gameCampo.classList.remove("ocultar")
     comecar=setInterval(moveCirculo,350)
     setTimeout(parar,6000)
-    setTimeout(som,5800)
+    setTimeout(som,5700)
     setTimeout(piscar,3000)
     setTimeout(paraPiscar,10000)
     

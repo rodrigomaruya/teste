@@ -4,6 +4,8 @@ const btn_comecar=document.getElementById("btn_comecar")
 const gameCampo=document.getElementById("gameCampo")
 const preto = document.getElementById("preto");
 const tempo = document.getElementById("tempo");
+let grito=document.createElement("audio")
+grito.setAttribute("src","./grito.wav")
 let comecar=null
 let n=0
 
@@ -24,9 +26,6 @@ const segundo=(a)=>{
 }
 
 const som=()=>{
-    // let grito=new Audio("./fotos/gemido-whatsapp.mp3")
-    let grito=document.createElement("audio")
-    grito.setAttribute("src","./grito.wav")
     grito.play()
 }
 const parar=()=>{

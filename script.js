@@ -24,7 +24,9 @@ const segundo=(a)=>{
 }
 
 const som=()=>{
-    let grito=new Audio("./fotos/gemido-whatsapp.mp3")
+    // let grito=new Audio("./fotos/gemido-whatsapp.mp3")
+    let grito=document.createElement("audio")
+    grito.setAttribute("src","./fotos/grito.wav")
     grito.play()
 }
 const parar=()=>{

@@ -6,6 +6,7 @@ const preto = document.getElementById("preto");
 const tempo = document.getElementById("tempo");
 let grito=new Audio("./grito.wav")
 let comecar=null
+let i=0
 let n=0
 
 btn_comecar.addEventListener("click",()=>{

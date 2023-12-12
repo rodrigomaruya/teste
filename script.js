@@ -12,10 +12,10 @@ btn_comecar.addEventListener("click",()=>{
     setInterval(segundo,1000,1)
     gameCampo.classList.remove("ocultar")
     comecar=setInterval(moveCirculo,350)
-    setTimeout(parar,6000)
+    // setTimeout(parar,6000)
     // setTimeout(som,960)
-    setTimeout(piscar,3000)
-    setTimeout(paraPiscar,10000)
+    // setTimeout(piscar,3000)
+    // setTimeout(paraPiscar,10000)
     
 })
 const segundo=(a)=>{
@@ -24,13 +24,12 @@ const segundo=(a)=>{
     tempo.innerHTML=`${seg} segundo`
 }
 
-// const som=()=>{
-//     grito.play();
-// }
+const som=()=>{
+    grito.play();
+}
 
 const parar=()=>{
     branco.style.visibility="hidden"
-    branco.style.visibility=(branco.style.visibility=="hidden")?grito.play():null;
     clearInterval(comecar) 
 }
 
@@ -49,6 +48,18 @@ const moveCirculo=()=>{
     let moveLeft=Math.floor(Math.random()*largura)
     
     circulo.style=`position:absolute;top:${moveTop}px;left:${moveLeft}px;background-color:${cor[cores]}`
+
+    if(circulo.style.backgroundColor=="red"){
+        i++
+        console.log(i)
+    }
+    if(i>=7){
+        parar()
+        piscar()
+        som()
+        tempo.classList.add("ocultar")
+        setTimeout(paraPiscar,3000)
+    }
 }
 
 function piscar() {

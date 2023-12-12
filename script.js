@@ -4,8 +4,7 @@ const btn_comecar=document.getElementById("btn_comecar")
 const gameCampo=document.getElementById("gameCampo")
 const preto = document.getElementById("preto");
 const tempo = document.getElementById("tempo");
-let grito=document.createElement("audio")
-grito.setAttribute("src","./grito.wav")
+let grito=new Audio("./grito.wav")
 let comecar=null
 let n=0
 
@@ -14,7 +13,7 @@ btn_comecar.addEventListener("click",()=>{
     gameCampo.classList.remove("ocultar")
     comecar=setInterval(moveCirculo,350)
     setTimeout(parar,6000)
-    setTimeout(som,960)
+    // setTimeout(som,960)
     setTimeout(piscar,3000)
     setTimeout(paraPiscar,10000)
     
@@ -25,12 +24,13 @@ const segundo=(a)=>{
     tempo.innerHTML=`${seg} segundo`
 }
 
-const som=()=>{
-    grito.play();
-}
+// const som=()=>{
+//     grito.play();
+// }
 
 const parar=()=>{
-    branco.classList.add("ocultar")
+    branco.style.visibility="hidden"
+    branco.style.visibility=(branco.style.visibility=="hidden")?grito.play():null;
     clearInterval(comecar) 
 }
 

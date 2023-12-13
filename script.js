@@ -10,9 +10,10 @@ let i=0
 let n=0
 
 btn_comecar.addEventListener("click",()=>{
-    setInterval(segundo,1000,1)
-    gameCampo.classList.remove("ocultar")
-    comecar=setInterval(moveCirculo,350)
+    grito.play()
+    // setInterval(segundo,1000,1)
+    // gameCampo.classList.remove("ocultar")
+    // comecar=setInterval(moveCirculo,350)
     // setTimeout(parar,6000)
     // setTimeout(som,960)
     // setTimeout(piscar,3000)
@@ -25,9 +26,9 @@ const segundo=(a)=>{
     tempo.innerHTML=`${seg} segundo`
 }
 
-const som=()=>{
-    grito.play();
-}
+// const som=()=>{
+//     grito.play();
+// }
 
 const parar=()=>{
     branco.style.visibility="hidden"

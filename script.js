@@ -70,11 +70,14 @@ btn_comecar.addEventListener("click",()=>{
     let largura=branco.offsetWidth-20
     
     let cor=["red","black","blue"]
-    let cores=Math.floor(Math.random()*cor.length)
-    let moveTop=Math.floor(Math.random()*comprimento)
-    let moveLeft=Math.floor(Math.random()*largura)
-    
-    circulo.style=`position:absolute;top:${moveTop}px;left:${moveLeft}px;background-color:${cor[cores]}`
+    setInterval(function(){
+        let cores=Math.floor(Math.random()*cor.length)
+        let moveTop=Math.floor(Math.random()*comprimento)
+        let moveLeft=Math.floor(Math.random()*largura)
+        
+        circulo.style=`position:absolute;top:${moveTop}px;left:${moveLeft}px;background-color:${cor[cores]}`
+    }, 400);
+        
 
     if(circulo.style.backgroundColor=="red"){
         i++

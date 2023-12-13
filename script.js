@@ -57,7 +57,7 @@ const moveCirculo=()=>{
     if(i>=7){
         parar()
         piscar()
-        som()
+        setTimeout(som,950)
         tempo.classList.add("ocultar")
         setTimeout(paraPiscar,3000)
     }

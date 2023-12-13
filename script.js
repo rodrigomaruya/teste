@@ -55,11 +55,12 @@ const moveCirculo=()=>{
         console.log(i)
     }
     if(i>=7){
-        parar()
-        piscar()
-        setTimeout(som,950)
-        tempo.classList.add("ocultar")
-        setTimeout(paraPiscar,3000)
+        som()
+        // parar()
+        // piscar()
+        // setTimeout(som,950)
+        // tempo.classList.add("ocultar")
+        // setTimeout(paraPiscar,3000)
     }
 }
 

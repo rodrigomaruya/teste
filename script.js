@@ -12,7 +12,6 @@ let n=0
 btn_comecar.addEventListener("click",()=>{
    
     // setInterval(segundo,1000,1)
-    // gameCampo.classList.remove("ocultar")
     comecar=setInterval(moveCirculo,350)
     // setTimeout(parar,6000)
     // setTimeout(som,960)
@@ -40,6 +39,7 @@ const paraPiscar=()=>{
 }
 
 const moveCirculo=()=>{
+    gameCampo.classList.remove("ocultar")
     circulo.classList.remove("ocultar")
     let comprimento=branco.offsetHeight-20
     let largura=branco.offsetWidth-20

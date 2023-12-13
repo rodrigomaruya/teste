@@ -4,7 +4,7 @@ const btn_comecar=document.getElementById("btn_comecar")
 const gameCampo=document.getElementById("gameCampo")
 const preto = document.getElementById("preto");
 const tempo = document.getElementById("tempo");
-let grito=new Audio("./grito.wav")
+let grito=new Audio("./fotos/grito.mp3")
 let comecar=null
 let i=0
 let n=0
@@ -56,9 +56,9 @@ const moveCirculo=()=>{
     }
     if(i>=7){
         // som()
-        // parar()
+        parar()
         // piscar()
-        setTimeout(som,950)
+        setTimeout(som,960)
         // tempo.classList.add("ocultar")
         // setTimeout(paraPiscar,3000)
     }

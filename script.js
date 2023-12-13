@@ -77,7 +77,7 @@ btn_comecar.addEventListener("click",()=>{
         cores=Math.floor(Math.random()*cor.length)
         moveTop=Math.floor(Math.random()*comprimento)
         moveLeft=Math.floor(Math.random()*largura)
-        
+        console.log("oi")
     }, 400);
     circulo.style=`position:absolute;top:${moveTop}px;left:${moveLeft}px;background-color:${cor[cores]}`
         

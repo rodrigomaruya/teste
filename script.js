@@ -10,10 +10,10 @@ let i=0
 let n=0
 
 btn_comecar.addEventListener("click",()=>{
-    grito.play()
+   
     // setInterval(segundo,1000,1)
     // gameCampo.classList.remove("ocultar")
-    // comecar=setInterval(moveCirculo,350)
+    comecar=setInterval(moveCirculo,350)
     // setTimeout(parar,6000)
     // setTimeout(som,960)
     // setTimeout(piscar,3000)

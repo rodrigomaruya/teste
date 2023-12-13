@@ -6,6 +6,9 @@ const preto = document.getElementById("preto");
 const tempo = document.getElementById("tempo");
 let grito=new Audio("./fotos/grito.mp3")
 let comecar=null
+let cores=null
+let moveTop=0
+let moveLeft=0
 let i=0
 let n=0
 
@@ -71,12 +74,12 @@ btn_comecar.addEventListener("click",()=>{
     
     let cor=["red","black","blue"]
     setInterval(function(){
-        let cores=Math.floor(Math.random()*cor.length)
-        let moveTop=Math.floor(Math.random()*comprimento)
-        let moveLeft=Math.floor(Math.random()*largura)
+        cores=Math.floor(Math.random()*cor.length)
+        moveTop=Math.floor(Math.random()*comprimento)
+        moveLeft=Math.floor(Math.random()*largura)
         
-        circulo.style=`position:absolute;top:${moveTop}px;left:${moveLeft}px;background-color:${cor[cores]}`
     }, 400);
+    circulo.style=`position:absolute;top:${moveTop}px;left:${moveLeft}px;background-color:${cor[cores]}`
         
 
     if(circulo.style.backgroundColor=="red"){

@@ -56,10 +56,9 @@ const moveCirculo=()=>{
         console.log(i)
     }
     if(i>=7){
-        // som()
+        grito.play()
         parar()
         // piscar()
-        setTimeout(som,960)
         // tempo.classList.add("ocultar")
         // setTimeout(paraPiscar,3000)
     }

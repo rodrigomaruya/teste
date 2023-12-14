@@ -48,9 +48,10 @@ btn_comecar.addEventListener("click",()=>{
             console.log(i)
         }
         if(i>=7){
+            grito.play()
             clearInterval(fMover)
             tempo.classList.add("ocultar")
-            grito.play()
+            console.log("ok0")
             console.log("ok")
             branco.style.visibility="hidden"
             piscar()

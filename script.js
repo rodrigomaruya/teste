@@ -19,44 +19,9 @@ const segundo=(a)=>{
     tempo.innerHTML=`${seg} segundo`
 }
 
-// const som=()=>{
-//     grito.play();
-// }
-
-// const parar=()=>{
-//     branco.style.visibility="hidden"
-//     clearInterval(comecar) 
-// }
-
 const paraPiscar=()=>{
     location.reload()
 }
-
-// const moveCirculo=()=>{
-//     gameCampo.classList.remove("ocultar")
-//     circulo.classList.remove("ocultar")
-//     let comprimento=branco.offsetHeight-20
-//     let largura=branco.offsetWidth-20
-    
-//     let cor=["red","black","blue"]
-//     let cores=Math.floor(Math.random()*cor.length)
-//     let moveTop=Math.floor(Math.random()*comprimento)
-//     let moveLeft=Math.floor(Math.random()*largura)
-    
-//     circulo.style=`position:absolute;top:${moveTop}px;left:${moveLeft}px;background-color:${cor[cores]}`
-
-//     if(circulo.style.backgroundColor=="red"){
-//         i++
-//         console.log(i)
-//     }
-//     if(i>=7){
-//         grito.play()
-//         parar()
-//         // piscar()
-//         // tempo.classList.add("ocultar")
-//         // setTimeout(paraPiscar,3000)
-//     }
-// }
 
 function piscar() {
     preto.classList.remove("ocultar")
@@ -67,40 +32,31 @@ function piscar() {
 }
 
 btn_comecar.addEventListener("click",()=>{
+    setInterval(segundo,1000,1)
     gameCampo.classList.remove("ocultar")
     circulo.classList.remove("ocultar")
     let comprimento=branco.offsetHeight-20
     let largura=branco.offsetWidth-20
-    
     let cor=["red","black","blue"]
-    setInterval(function(){
+    const fMover=setInterval(function(){
         cores=Math.floor(Math.random()*cor.length)
         moveTop=Math.floor(Math.random()*comprimento)
         moveLeft=Math.floor(Math.random()*largura)
-        console.log("oi")
+        circulo.style=`position:absolute;top:${moveTop}px;left:${moveLeft}px;background-color:${cor[cores]}`
+        if(circulo.style.backgroundColor=="red"){
+            i++
+            console.log(i)
+        }
+        if(i>=7){
+            clearInterval(fMover)
+            tempo.classList.add("ocultar")
+            grito.play()
+            console.log("ok")
+            branco.style.visibility="hidden"
+            piscar()
+            setTimeout(paraPiscar,3000)
+        }
     }, 400);
-    circulo.style=`position:absolute;top:${moveTop}px;left:${moveLeft}px;background-color:${cor[cores]}`
-        
-
-    if(circulo.style.backgroundColor=="red"){
-        i++
-        console.log(i)
-    }
-    if(i>=7){
-        grito.play()
-        branco.style.visibility="hidden"
-        // parar()
-        // piscar()
-        // tempo.classList.add("ocultar")
-        // setTimeout(paraPiscar,3000)
-    }
-    // setInterval(segundo,1000,1)
-    // comecar=setInterval(moveCirculo,350)
-    // setTimeout(parar,6000)
-    // setTimeout(som,960)
-    // setTimeout(piscar,3000)
-    // setTimeout(paraPiscar,10000)
-    
 })
 
  
